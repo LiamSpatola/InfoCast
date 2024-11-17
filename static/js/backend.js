@@ -36,3 +36,11 @@ function broadcastMessage() {
 
     window.socket.emit("broadcast", msg);
 }
+
+function clearFields() {
+    getElement("msg-line-1-input").value = "";
+    getElement("msg-line-2-input").value = "";
+    getElement("msg-line-3-input").value = "";
+    getElement("msg-line-4-input").value = "";
+    getElement("msg-line-5-input").value = "";
+}
