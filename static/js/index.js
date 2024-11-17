@@ -30,6 +30,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.setInterval( function() {
+    // Formatting the date
+    const now = new Date();
+
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    const day = now.getDate();
+    const month = now.toLocaleString('default', { month: 'long' });
+    const year = now.getFullYear();
+
+    const dateString = `${day} ${month} ${year} ${hours}:${minutes}:${seconds}`;
+
     // Displaying the current time twice every second
-    getElement("current-time").innerHTML = "Current Time: " + Date();
+    getElement("current-time").innerHTML = "Current Time: " + dateString;
 }, 500);
