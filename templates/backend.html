@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>InfoCast Backend</title>
 </head>
 <body>
+    <label for="msg-line-1-input">Line 1: </label>
+    <input type="text" id="msg-line-1-input" class="msg-line-1-input"><br>
     
+    <label for="msg-line-1-input">Line 2: </label>
+    <input type="text" id="msg-line-2-input" class="msg-line-2-input"><br>
+    
+    <label for="msg-line-1-input">Line 3: </label>
+    <input type="text" id="msg-line-3-input" class="msg-line-3-input"><br>
+    
+    <label for="msg-line-1-input">Line 4: </label>
+    <input type="text" id="msg-line-4-input" class="msg-line-4-input"><br>
+    
+    <label for="msg-line-1-input">Line 5: </label>
+    <input type="text" id="msg-line-5-input" class="msg-line-5-input"><br>
+    
+    <button onclick="broadcastMessage()">Broadcast to Display</button>
 </body>
 </html>

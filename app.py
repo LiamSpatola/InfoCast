@@ -1,7 +1,7 @@
 from os import environ
 
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 
 
@@ -19,7 +19,12 @@ app.config["SECRET_KEY"] = environ.get("SECRET_KEY", default="super-secret-key")
 
 @app.route("/")
 def index():
-    return "Page under construction"
+    return render_template("index.html")
+
+
+@app.route("/backend")
+def backend():
+    return render_template("backend.html")
 
 
 @socketio.on("broadcast")
