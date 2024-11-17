@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>InfoCast Display</title>
 </head>
 <body>
-    <h1 id="msg-line-1" class="msg-line-1"></h1>
-    <h2 id="msg-line-2" class="msg-line-2"></h2>
-    <h3 id="msg-line-3" class="msg-line-3"></h3>
-    <h4 id="msg-line-4" class="msg-line-4"></h4>
-    <p id="msg-line-5" class="msg-line-5"></p>
-    <p id="current_time" class="current_time"></p>
+    <h1 id="msg-line-1" class="msg-line-1">Loading...</h1>
+    <h2 id="msg-line-2" class="msg-line-2">Loading...</h2>
+    <h2 id="msg-line-3" class="msg-line-3">Loading...</h2>
+    <h2 id="msg-line-4" class="msg-line-4">Loading...</h2>
+    <h3 id="msg-line-5" class="msg-line-5">Loading...</h3>
+    <h4 id="current-time" class="current-time">Loading...</h4>
 </body>
 </html>

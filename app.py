@@ -2,7 +2,7 @@ from os import environ
 
 from dotenv import load_dotenv
 from flask import Flask, render_template
-from flask_socketio import SocketIO, send
+from flask_socketio import SocketIO, emit
 
 
 # Configuring the app and websockets
@@ -30,7 +30,7 @@ def backend():
 @socketio.on("broadcast")
 def handle_broadcast(msg):
     # Handling a broadcast to the display
-    send(msg, broadcast=True)
+    emit("broadcast", msg, broadcast=True)
 
 
 @socketio.on("connect")
