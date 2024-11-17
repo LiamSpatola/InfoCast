@@ -1,8 +1,7 @@
-.msg-line-1, .msg-line-2, .msg-line-3, .msg-line-4, .msg-line-5 {
+.msg-line {
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 50% auto;
 }
 
 .current-time {
@@ -26,4 +25,32 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+}
+
+label {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+button {
+    padding: 5px;
+    width: 25%;
+    margin: 5px;
 }
