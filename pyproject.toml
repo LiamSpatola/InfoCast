@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "infocast"
-version = "0.1.0"
+version = "1.0.0"
 description = "A simple live announcement system based off of the flask web framework and websockets."
 authors = ["Liam Spatola"]
 license = "GNU GPLv3"

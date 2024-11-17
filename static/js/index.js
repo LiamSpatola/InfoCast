@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     window.socket.on('ring', function(action) {
         if (action == "start") {
-            console.log("Ringing the bells")
+            console.log("Ringing the bells");
             window.bell.loop = true;
             window.bell.play();
         } else {
-            console.log("Stopping the bells")
+            console.log("Stopping the bells");
             window.bell.pause();
             window.bell.currentTime = 0;
         }
