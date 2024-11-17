@@ -44,3 +44,11 @@ function clearFields() {
     getElement("msg-line-4-input").value = "";
     getElement("msg-line-5-input").value = "";
 }
+
+function ringBells() {
+    window.socket.emit("ring", "start");
+}
+
+function stopBells() {
+    window.socket.emit("ring", "stop");
+}

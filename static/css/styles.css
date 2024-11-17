@@ -54,3 +54,7 @@ button {
     width: 25%;
     margin: 5px;
 }
+
+#bell-button {
+    margin-top: 20px;
+}

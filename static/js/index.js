@@ -3,6 +3,8 @@ function getElement(element_id) {
     return document.getElementById(element_id);
 }
 
+window.bell = new Audio("static/audio/bell.mp3");
+
 document.addEventListener('DOMContentLoaded', (event) => {
     window.socket = io();
 
@@ -21,6 +23,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         getElement("msg-line-3").innerHTML = msg["line3"];
         getElement("msg-line-4").innerHTML = msg["line4"];
         getElement("msg-line-5").innerHTML = msg["line5"];
+    });
+
+    window.socket.on('ring', function(action) {
+        if (action == "start") {
+            console.log("Ringing the bells")
+            window.bell.loop = true;
+            window.bell.play();
+        } else {
+            console.log("Stopping the bells")
+            window.bell.pause();
+            window.bell.currentTime = 0;
+        }
     });
 
     window.socket.on('disconnect', function() {

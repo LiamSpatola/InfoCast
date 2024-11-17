@@ -33,6 +33,12 @@ def handle_broadcast(msg):
     emit("broadcast", msg, broadcast=True)
 
 
+@socketio.on("ring")
+def handle_bells_ringing(action):
+    # Handling ringing the bells. If action is 'start', the bells ring. If it is 'stop', they stop
+    emit("ring", action, broadcast=True)
+
+
 @socketio.on("connect")
 def handle_connect():
     print("Client connected")
