@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Connected to server');
     });
 
+    window.socket.on('colour', function(colour) {
+        document.body.style.background = colour;
+    });
+
     window.socket.on('disconnect', function() {
         // Disconnecting from the server
         console.log('Disconnected from server');
@@ -33,6 +37,9 @@ function broadcastMessage() {
         line4: msg_line_4,
         line5: msg_line_5,
     };
+    
+    var bg_colour = getElement('bg-colour-picker').value;
+    window.socket.emit("colour", bg_colour);
 
     window.socket.emit("broadcast", msg);
 }
@@ -43,6 +50,7 @@ function clearFields() {
     getElement("msg-line-3-input").value = "";
     getElement("msg-line-4-input").value = "";
     getElement("msg-line-5-input").value = "";
+    getElement("bg-colour-picker").value = "#2F6B7E";
 }
 
 function ringBells() {
