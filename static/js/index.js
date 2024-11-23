@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
+    window.socket.on('colour', function(colour) {
+        document.body.style.background = colour;
+    });
+
     window.socket.on('disconnect', function() {
         // Disconnecting from the server
         console.log('Disconnected from server');
