@@ -38,6 +38,11 @@ def handle_bells_ringing(action):
     # Handling ringing the bells. If action is 'start', the bells ring. If it is 'stop', they stop
     emit("ring", action, broadcast=True)
 
+@socketio.on("colour")
+def handle_colour_change(colour):
+    # Handling the background colour changing
+    emit("colour", colour, broadcast=True)
+
 
 @socketio.on("connect")
 def handle_connect():
